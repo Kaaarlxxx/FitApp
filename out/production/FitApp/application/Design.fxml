@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Button fx:id="BMIcalc" layoutX="433.0" layoutY="386.0" mnemonicParsing="false" onAction="#BM" text="Nadpisz Dane i oblicz" />
+      <Separator layoutY="430.0" prefHeight="17.0" prefWidth="600.0" />
+      <Label fx:id="date" alignment="CENTER" layoutX="401.0" layoutY="14.0" prefHeight="27.0" prefWidth="185.0" style="-fx-border-width: 1; -fx-border-color: black;" text="DATE" />
+      <TextField fx:id="weigth" layoutX="97.0" layoutY="179.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="height" layoutX="97.0" layoutY="244.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="age" layoutX="97.0" layoutY="306.0" prefHeight="25.0" prefWidth="89.0" />
+      <Label layoutX="14.0" layoutY="183.0" prefHeight="17.0" prefWidth="83.0" text="Waga [kg] :" />
+      <Label layoutX="14.0" layoutY="248.0" prefHeight="17.0" prefWidth="83.0" text="Wzrost [cm] :" />
+      <Label layoutX="14.0" layoutY="310.0" prefHeight="17.0" prefWidth="83.0" text="Wiek :" />
+      <Label fx:id="calcres" alignment="CENTER" layoutX="386.0" layoutY="178.0" prefHeight="27.0" prefWidth="185.0" style="-fx-border-color: black;" />
+      <Label fx:id="Standard" alignment="CENTER" layoutX="386.0" layoutY="243.0" prefHeight="27.0" prefWidth="185.0" style="-fx-border-color: black;" />
+      <Separator layoutX="1.0" layoutY="683.0" prefHeight="0.0" prefWidth="600.0" />
+      <Separator layoutX="201.0" layoutY="438.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="400.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Separator>
+      <Separator layoutX="197.0" layoutY="438.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="5.0" />
+      <Label layoutX="284.0" layoutY="459.0" text="Obiad" />
+      <Label layoutX="478.0" layoutY="459.0" text="Kolacja" />
+      <Label layoutX="71.0" layoutY="459.0" text="Śniadanie" />
+      <Label layoutX="34.0" layoutY="509.0" text="białka" />
+      <Label layoutX="29.0" layoutY="576.0" text="tłuszcze" />
+      <Label layoutX="13.0" layoutY="642.0" text="węglowodany" />
+      <TextField fx:id="pbr" layoutX="97.0" layoutY="505.0" prefHeight="25.0" prefWidth="89.0" text="0" />
+      <TextField fx:id="cbr" layoutX="97.0" layoutY="638.0" prefHeight="25.0" prefWidth="89.0" text="0" />
+      <TextField fx:id="fbr" layoutX="97.0" layoutY="572.0" prefHeight="25.0" prefWidth="89.0" text="0" />
+      <Label layoutX="240.0" layoutY="509.0" text="białka" />
+      <Label layoutX="228.0" layoutY="576.0" text="tłuszcze" />
+      <Label layoutX="219.0" layoutY="642.0" text="węglowodany" />
+      <TextField fx:id="pdn" layoutX="300.0" layoutY="505.0" prefHeight="25.0" prefWidth="89.0" text="0" />
+      <TextField fx:id="fdn" layoutX="300.0" layoutY="572.0" prefHeight="25.0" prefWidth="89.0" text="0" />
+      <TextField fx:id="cdn" layoutX="300.0" layoutY="638.0" prefHeight="25.0" prefWidth="89.0" text="0" />
+      <Label layoutX="431.0" layoutY="509.0" text="białka" />
+      <Label layoutX="426.0" layoutY="576.0" text="tłuszcze" />
+      <Label layoutX="413.0" layoutY="642.0" text="węglowodany" />
+      <TextField fx:id="psp" layoutX="497.0" layoutY="505.0" prefHeight="25.0" prefWidth="89.0" text="0" />
+      <TextField fx:id="fsp" layoutX="497.0" layoutY="572.0" prefHeight="25.0" prefWidth="89.0" text="0" />
+      <TextField fx:id="csp" layoutX="497.0" layoutY="638.0" prefHeight="25.0" prefWidth="89.0" text="0" />
+      <Button fx:id="Submit" layoutX="470.0" layoutY="694.0" mnemonicParsing="false" onAction="#WholeDay" text="Podsumuj Dzień" />
+      <Label fx:id="WDP" layoutX="11.0" layoutY="692.0" text="Białka spożyte podczas całego dnia -  ..." />
+      <Label fx:id="WDF" layoutX="11.0" layoutY="725.0" text="Tłuszcze spożyte podczas całego dnia -  ..." />
+      <Label fx:id="WDC" layoutX="6.0" layoutY="755.0" text="Węglowodany spożyte podczas całego dnia - ..." />
+      <Button fx:id="ToFile" layoutX="436.0" layoutY="739.0" mnemonicParsing="false" onAction="#SaveToFile" text="Zapisz dzisiejsze dane" />
+      <Label fx:id="FullKcal" layoutX="8.0" layoutY="784.0" text="Dzisiejsze spożyte Kalorie = ..." />
+      <Button fx:id="LogIn" layoutX="498.0" layoutY="78.0" mnemonicParsing="false" onAction="#LOG" text="LOG IN" />
+      <Separator layoutY="125.0" prefHeight="17.0" prefWidth="600.0" />
+      <Label layoutX="6.0" layoutY="6.0" text="Panel Logowania (użyj na początku)" />
+      <Label layoutX="17.0" layoutY="142.0" text="Twoje Parametry (jeśli uzupełnione - zalogowałeś się poprawnie)" />
+      <Label layoutX="43.0" layoutY="82.0" text="Wpisz swoją nazwę tutaj -&gt;" />
+      <TextField fx:id="nickname" layoutX="202.0" layoutY="78.0" prefHeight="25.0" prefWidth="164.0" promptText="Duże Litery mają znaczenie!" />
+      <Label layoutX="14.0" layoutY="370.0" prefHeight="17.0" prefWidth="83.0" text="Płeć :" />
+      <TextField fx:id="Gender" layoutX="92.0" layoutY="366.0" prefHeight="25.0" prefWidth="89.0" />
+      <Button fx:id="SumUpWeekbef" layoutX="397.0" layoutY="786.0" mnemonicParsing="false" onAction="#SumUpWeek" text="Podsumuj poprzedni Tydzień" />
+   </children>
+</Pane>
